@@ -12,7 +12,7 @@ app.get("/api", (req, res) => {
         
     //curret UTC time 
     const now = new Date();
-    const utc_time = now.toISOString();
+    const utc_time = now.toISOString().slice(0, 19) + 'Z';
     
     //The github repo and file URL
     const github_repo_url = "https://github.com/Josephinemwende/Backend-Task1.git"
