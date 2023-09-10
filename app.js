@@ -5,18 +5,18 @@ const port = process.env.PORT || 3000;
 app.get("/api", (req, res) => {
     const slack_name = req.query.slack_name;
     const track = req.query.track;
-
+    
     //current day of the week
     const daysOfTheWeek = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     const current_day = daysOfTheWeek[new Date().getDay()];
-    
+        
     //curret UTC time 
     const now = new Date();
     const utc_time = now.toISOString();
-
+    
     //The github repo and file URL
     const github_repo_url = "https://github.com/Josephinemwende/Backend-Task1.git"
-    const github_file_url = "";
+    const github_file_url = "https://github.com/Josephinemwende/Backend-Task1/blob/main/app.js";
 
     // response JSON
     const response = {
